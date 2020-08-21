@@ -2,3 +2,8 @@ node_modules
 input
 .DS_Store
 fonts/.DS_Store
+sass
+gulpfile.js
+package.json
+package-lock.json
+server.js
