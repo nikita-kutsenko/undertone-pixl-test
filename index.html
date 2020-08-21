@@ -3,9 +3,149 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
     <title>PAGEGRABBER X | MLS CUP</title>
 </head>
 <body>
-    
+    <section id="adv-section" class="adv">
+        <!-- adv close btn  -->
+        <span id="adv-close-btn" class="adv-closeBtb">
+            <span class="adv-closeBtb-line"></span>
+        </span>
+
+        <!-- gradient background of adv-->
+        <div id="adv__gradientBg" class="adv-gradientBg"></div>
+
+        <!-- cup and confetti -->
+        <div id="adv__cupHoist" class="adv-cupHoist">
+            <!-- cup  -->
+            <div class="adv-cupHoist-cup">
+                <img id="adv-cupImg" class="adv-cupHoist-cup-img"src="./img/Cup_Hoist.svg" alt="Cup Hoist">
+            </div>
+
+            <!-- confetti  -->
+            <div id="adv-confettiImages" class="adv-cupHoist-confetti">
+                <!-- line of 4 confetti images -->
+                <div class="adv-cupHoist-confetti-line adv-cupHoist-confetti-firstLine">
+                    <img src="./img/Confetti.svg" alt="confetti image" class="adv-cupHoist-confetti-line-img adv-cupHoist-confetti-line-rotateLeft">
+                    <img src="./img/Confetti.svg" alt="confetti image" class="adv-cupHoist-confetti-line-img adv-cupHoist-confetti-line-rotateRight">
+                    <img src="./img/Confetti.svg" alt="confetti image" class="adv-cupHoist-confetti-line-img adv-cupHoist-confetti-line-rotateLeft">
+                    <img src="./img/Confetti.svg" alt="confetti image" class="adv-cupHoist-confetti-line-img adv-cupHoist-confetti-line-rotateRight">
+                </div>
+
+                <!-- line of 4 confetti images -->
+                <div class="adv-cupHoist-confetti-line adv-cupHoist-confetti-secondLine">
+                    <img src="./img/Confetti.svg" alt="confetti image" class="adv-cupHoist-confetti-line-img adv-cupHoist-confetti-line-rotateRight">
+                    <img src="./img/Confetti.svg" alt="confetti image" class="adv-cupHoist-confetti-line-img adv-cupHoist-confetti-line-rotateLeft">
+                    <img src="./img/Confetti.svg" alt="confetti image" class="adv-cupHoist-confetti-line-img adv-cupHoist-confetti-line-rotateRight">
+                    <img src="./img/Confetti.svg" alt="confetti image" class="adv-cupHoist-confetti-line-img adv-cupHoist-confetti-line-rotateLeft">
+                </div>
+
+                <!-- line of 4 confetti images -->
+                <div class="adv-cupHoist-confetti-line adv-cupHoist-confetti-thirdLine">
+                    <img src="./img/Confetti.svg" alt="confetti image" class="adv-cupHoist-confetti-line-img adv-cupHoist-confetti-line-rotateLeft">
+                    <img src="./img/Confetti.svg" alt="confetti image" class="adv-cupHoist-confetti-line-img adv-cupHoist-confetti-line-rotateRight">
+                    <img src="./img/Confetti.svg" alt="confetti image" class="adv-cupHoist-confetti-line-img adv-cupHoist-confetti-line-rotateLeft">
+                    <img src="./img/Confetti.svg" alt="confetti image" class="adv-cupHoist-confetti-line-img adv-cupHoist-confetti-line-rotateRight">
+                </div>
+                
+                <!-- line of 4 confetti images -->
+                <div class="adv-cupHoist-confetti-line adv-cupHoist-confetti-fourthLine">
+                    <img src="./img/Confetti.svg" alt="confetti image" class="adv-cupHoist-confetti-line-img adv-cupHoist-confetti-line-rotateRight">
+                    <img src="./img/Confetti.svg" alt="confetti image" class="adv-cupHoist-confetti-line-img adv-cupHoist-confetti-line-rotateLeft">
+                    <img src="./img/Confetti.svg" alt="confetti image" class="adv-cupHoist-confetti-line-img adv-cupHoist-confetti-line-rotateRight">
+                    <img src="./img/Confetti.svg" alt="confetti image" class="adv-cupHoist-confetti-line-img adv-cupHoist-confetti-line-rotateLeft">
+                </div>
+            </div>
+        </div>
+
+        <!-- teams  -->
+        <div id="adv__teams" class="adv-teams">
+            <!-- portland and dallas backgrounds  -->
+            <div class="adv-teams-bg">
+                <div id="adv-teams-bg-portland" class="adv-teams-bg-left"></div>
+                <div id="adv-teams-bg-dallas" class="adv-teams-bg-right"></div> 
+            </div>
+
+            <!-- portland and dallas icons + text "one game to glory" -->
+            <div class="adv-teams-teamsContainer">
+                <!-- portland icons -->
+                <div id="teamsContainer-portlandIcon" class="adv-teams-teamsContainer-icon adv-teams-teamsContainer-portlandIcon"></div>
+
+                <!-- text "one game to glory" -->
+                <div class="adv-teams-teamsContainer-text">
+                    <div id="adv-teamsContainer-text-helper" class="adv-teams-teamsContainer-text-helper">
+                        <p id="teamsContainer-text-one" class="adv-teams-teamsContainer-text-helper-one adv-teams-teamsContainer-text-helper-line">one</p>
+                        <p id="teamsContainer-text-game" class="adv-teams-teamsContainer-text-helper-game adv-teams-teamsContainer-text-helper-line">game</p>
+                        <p id="teamsContainer-text-toGlory" class="adv-teams-teamsContainer-text-helper-toGlory adv-teams-teamsContainer-text-helper-line">to glory</p>
+                    </div>
+                </div>
+
+                <!-- dallas icons -->
+                <div id="teamsContainer-dallasIcon" class="adv-teams-teamsContainer-icon adv-teams-teamsContainer-dallasIcon"></div>
+            </div>
+        </div>
+
+        <!-- info area + video  -->
+        <div id="advInfo" class="adv-info">
+            <!-- gradient background -->
+            <div id="adv-infoGradientBg" class="adv-info-gradientBg"></div>
+
+            <!-- btn "watch tv spot" -->
+            <span id="adv-infoBtn" class="adv-info-btn">
+                <span class="adv-info-btn-line"></span>
+            </span>
+
+            <!-- info backgrounds black and gold cup -->
+            <div class="adv-info-bg">
+                <div class="adv-info-bg-black"></div>
+                <div class="adv-info-bg-img"></div>
+            </div>
+
+            <!-- info text area  -->
+            <div class="adv-info-content">
+                <!-- info text  -->
+                <div class="adv-info-content-text">
+                    <!-- teams text  -->
+                    <p class="adv-info-content-text-portland adv-info-content-text-teams">portalnd timbers</p>
+                    <p class="adv-info-content-text-vs adv-info-content-text-teams">vs</p>
+                    <p class="adv-info-content-text-dallas adv-info-content-text-teams">fc dallas </p>
+
+                    <!-- date text  -->
+                    <div class="adv-info-content-text-date">
+                        <p class="adv-info-content-text-date-monthAndDate">december 6<sup class="adv-info-content-text-date-monthAndDate-th">th</sup></p>
+                        <div class="adv-info-content-text-date-line"></div>
+                        <p class="adv-info-content-text-date-time">3pm et</p>
+                    </div>
+
+                    <!-- live on text  -->
+                    <div class="adv-info-content-text-live">
+                        <p class="adv-info-content-text-live-liveon">live on</p>
+                        <div class="adv-info-content-text-live-fs1"></div>
+                        <p class="adv-info-content-text-live-plus">+</p>
+                        <div class="adv-info-content-text-live-umas"></div>
+                    </div>
+                </div>
+
+                <!-- cup icon down the page  -->
+                <div class="adv-info-content-cupIcon"></div>
+            </div>
+
+            <!-- video area  -->
+            <div class="adv-info-videoContainer">
+                <!-- video  -->
+                <video id="adv-video" class="adv-info-videoContainer-video" controls poster="./img/video-poster.png">
+                    <source src="./video/video.mp4">
+                </video>
+
+                <!-- video play button -->
+                <span id="adv-playBtn" class="adv-info-videoContainer-playBtn">
+                    <span class="adv-info-videoContainer-playBtn-line"></span>
+                </span>
+            </div>
+        </div>
+    </section>
+<script src="./js/script.js"></script>
 </body>
 </html>

@@ -1,0 +1,176 @@
+@keyframes btn-anim {
+    from {
+      left: -1px;
+      top: -1px;
+  
+      width: 36px;
+      height: 36px;
+    }
+    to {
+      left: -7px;
+      top: -7px;
+      
+      width: 48px;
+      height: 48px;
+    }
+  }
+  @keyframes large-btn-anim {
+    from {
+      left: -4px;
+      top: -4px;
+  
+      width: 92px;
+      height: 92px;
+    }
+    to {
+      left: -13px;
+      top: -13px;
+      
+      width: 110px;
+      height: 110px;
+    }
+  }
+  @keyframes play-btn-anim {
+    from {
+      left: -2px;
+      top: -3px;
+  
+      width: 130px;
+      height: 130px;
+    }
+    to {
+      left: -18px;
+      top: -18px;
+      
+      width: 160px;
+      height: 160px;
+    }
+  }
+  
+  @keyframes confetti-rotate-anim-right {
+    0% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(90deg);
+    }
+    50% {
+      transform: rotate(180deg);
+    }
+    75% {
+      transform: rotate(270deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes confetti-rotate-anim-left {
+    0% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(-90deg);
+    }
+    50% {
+      transform: rotate(-180deg);
+    }
+    75% {
+      transform: rotate(-270deg);
+    }
+    100% {
+      transform: rotate(-360deg);
+    }
+  }
+  
+  @keyframes teams-portlandBg-animation-appear {
+    0% {
+      right: 100vw;
+    }
+    100% {
+      right: 22vw;
+    }
+  }
+  @keyframes teams-portlandBg-animation-disappear {
+    0% {
+      right: 22vw;
+    }
+    100% {
+      right: 100vw;
+    }
+  }
+  
+  @keyframes teams-dallasBg-animation-appear {
+    0% {
+      left: 100vw;
+    }
+    100% {
+      left: 22vw;
+    }
+  }
+  @keyframes teams-dallasBg-animation-disappear {
+    0% {
+      left: 22vw;
+    }
+    100% {
+      left: 100vw;
+    }
+  }
+  
+  @keyframes teams-portlandIcon-animation-disappear {
+    0% {
+      margin-right: 50px;
+    }
+    100% {
+      margin-right: 50vw;
+    }
+  }
+  @keyframes teams-dallasIcon-animation-disappear {
+    0% {
+      margin-left: 50px;
+    }
+    100% {
+      margin-left: 50vw;
+    }
+  }
+  
+  @keyframes teams-text-animation-appear {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes teams-text-animation-disappear {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  @keyframes infoGradientBg-animation-disappear {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  @keyframes teams-icons-animation-appear {
+    0% {
+      opacity: 0;
+      height: 100vh;
+      width: 100vw;
+    }
+    100% {
+      opacity: 1;
+      height: 378px;
+      width: 378px;
+    }
+  }
+  

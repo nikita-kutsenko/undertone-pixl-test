@@ -1,16 +1,676 @@
 @import "reset";
 @import "anim";
+@import "fonts";
+
+// colors
+$c-white: #ffffff;
+$c-black: #000000;
+$c-yellow: #d0ad68;
+
 
 
 /*general styles*/
 body {
-  background-color: #FDFDFD;
+  background-color: $c-white;
 }
 
-.wrapper {
+body {
+  width: 100vw;
+  height: 100vh;
+
+  background-image: url(../img/Desktop_cropped1050.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.container {
-    max-width: 1440px;
-    margin: 0 auto;
+
+
+.adv {
+  display: none;
+  position: relative;
+
+  &-closeBtb {
+    display: flex;
+    position: fixed;
+    top: 15px;
+    right: 18px;
+
+    width: 36px;
+    height: 36px;
+    
+    border: 2px solid $c-white;
+    border-radius: 50%;
+    // background-color: rgb(0 0 0 / 0.6);
+    background-color: rgba(0, 0, 0, 0.6);
+
+    cursor: pointer;
+
+    z-index: 1000;
+
+    &:before {
+      position: absolute;
+      left: -7px;
+      top: -7px;
+      
+      content: "";
+      width: 48px;
+      height: 48px;
+
+      animation: 1s linear 0s infinite alternate btn-anim;
+
+      border-radius: 50%;
+      background-color: rgba(0, 0, 0, 0);
+      border: 1px solid $c-white;
+    }
+
+    &-line {
+      // position: absolute;
+      margin: auto;
+      width: 20px;
+      height: 2px;
+      
+      // top: 40%;
+      // left: 8px;
+
+      // vertical-align: middle;
+      transform: rotate(45deg);
+      
+      background-color: $c-white;
+
+      &:before {
+        content: "";
+        position: absolute;
+
+        background-color: #fff;
+        vertical-align: middle;
+
+        // top: 0;
+        // left: 8px;
+
+        width: 20px;
+        height: 2px;
+        
+        transform: rotate(-90deg);
+      }
+    }
+  }
+
+  &-gradientBg {
+    width: 100vw;
+    height: 100vh;
+    opacity: 0.5;
+    background: linear-gradient(180deg, $c-white 20%, #000000 90%);
+  }
+
+  &-cupHoist {
+    position: absolute;
+
+    width: 100vw;
+    height: 100vh;
+
+    overflow: hidden;
+
+    &-cup {
+      display: flex;
+      justify-content: center;
+
+      &-img {
+        position: absolute;
+
+        margin-top: 100vh;
+        height: calc(100vh - 5%);
+
+        filter: drop-shadow(60.891px 67.626px 5.5px rgba(0,0,0,0.35));
+      }
+    }
+
+    &-confetti {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+
+      margin-top: calc(100vh + 250px);
+
+      &-line {
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+
+        &-img {
+          width: 553px;
+        }
+
+        &-rotateLeft {
+          transform: rotate(45deg);
+          // animation: 1s linear 0s infinite alternate btn-anim;
+          animation: 20s linear 0s 1 normal confetti-rotate-anim-left;
+        }
+
+        &-rotateRight {
+          transform: rotate(135deg);
+          animation: 20s linear 0s 1 normal confetti-rotate-anim-right;
+        }
+      }
+
+      &-firstLine {
+        top: -200px;
+      }
+      &-secondLine {
+        top: 150px;
+      }
+      &-thirdLine {
+        top: 500px;
+      }
+      &-fourthLine {
+        top: 920px;
+      }
+
+      
+    }
+
+  }
+
+  &-teams {
+    position: absolute;
+
+    width: 100vw;
+    height: 100vh;
+
+    overflow: hidden;
+
+    &-bg {
+      position: relative;
+
+      &-left {
+        position: absolute;
+        top: 0;
+        // right: 22vw;
+        right: 100vw;
+
+        width: 80vw;
+        height: 100vh;
+
+        background-image: url(../img/Portland.png);
+        background-position: right;
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: 510;
+      }
+
+      &-right {
+        position: absolute;
+        top: 0;
+        // left: 22vw;
+        left: 100vw;
+
+        width: 80vw;
+        height: 100vh;
+
+        background-image: url(../img/Dallas.png);
+        background-position: left;
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: 520;
+      }
+    }
+
+    &-teamsContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      overflow: hidden;
+
+      width: 100vw;
+      height: 100vh;
+
+      z-index: 550;
+
+      &-icon {
+        opacity: 0;
+
+        height: 100vh;
+        width: 100vw;
+
+        // background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      &-portlandIcon {
+        background-image: url(../img/Portland-icon.svg);
+        background-position: right;
+
+        margin-right: 50px;
+          
+        z-index: 560;
+      }
+
+      &-dallasIcon {
+        background-image: url(../img/Dallas-icon.svg);
+        background-position: left;
+
+        margin-left: 50px;
+        
+        z-index: 570;
+      }
+
+      &-text {
+        display: flex;
+  
+        justify-content: center;
+        align-items: center;
+        
+        // width: 100vw;
+        // height: 100vh;
+
+        z-index: 580;
+  
+        &-helper {
+          box-sizing: border-box;
+  
+          &-line {
+            text-transform: uppercase;
+            color: #ffffff;
+            font-family: "DINNextLTPro-Bold";
+            text-align: center;
+            filter: drop-shadow(6.691px 7.431px 16px #000000);
+            margin-bottom: 26px;
+  
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+  
+          &-one {
+            opacity: 0;
+  
+            font-size: 300px;
+            line-height: 210px;
+          }
+          &-game {
+            opacity: 0;
+            
+            font-size: 212px;
+            line-height: 150px;
+          }
+          &-toGlory {
+            opacity: 0;
+            
+            font-size: 120px;
+            line-height: 88px;
+          }
+        }
+      }
+    }
+  }
+
+  &-info {
+    opacity: 0;
+    position: absolute;
+
+    width: 100vw;
+    height: 100vh;
+
+    overflow: hidden;
+
+    z-index: 300;
+
+    &-gradientBg {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 100%;
+
+      opacity: 1;
+      background-color: $c-black;
+      z-index: 410;
+    }
+
+    &-btn {
+      
+      display: flex;
+      position: fixed;
+      top: 120px;
+      right: 17.5vw;
+  
+      width: 90px;
+      height: 90px;
+      
+      border: 4px solid $c-white;
+      border-radius: 50%;
+
+      background-color: rgba(0, 0, 0, 0.6);
+  
+      z-index: 820;
+        
+      cursor: url(../img/cursor-pointer.png) 2 2, pointer; 
+  
+      &:before {
+        content: "";
+        position: absolute;
+        z-index: 810;
+
+        left: -4px;
+        top: -4px;
+        
+        width: 110px;
+        height: 110px;
+        animation: 1s linear 0s infinite alternate large-btn-anim;  
+  
+        border-radius: 50%;
+        background-color: rgba(0, 0, 0, 0);
+        border: 3px solid $c-white;
+      }
+
+      &:after {
+        content: "watch tv spot";
+
+        position: absolute;
+        left: -60px;
+        top: 110px;
+        z-index: 815;
+        
+        width: max-content;
+        
+        font-size: 30px;
+        color: $c-white;
+        font-family: "DINNextLTPro-Bold";
+        text-align: center;
+        text-transform: uppercase;
+
+        filter: drop-shadow(0.209px 1.989px 1.5px rgba(0,0,0,0.75));
+      }
+  
+      &-line {
+        margin: auto;
+        width: 40px;
+        height: 4px;
+        
+        background-color: $c-white;
+  
+        &:before {
+          content: "";
+          position: absolute;
+  
+          background-color: #fff;
+          vertical-align: middle;
+  
+          width: 40px;
+          height: 4px;
+          
+          transform: rotate(-90deg);
+        }
+      }
+    }
+
+    &-bg {
+      position: relative;
+
+      &-black {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 62vw;
+        height: 100vh;
+
+        background-image: url(../img/black-bg.png);
+        background-position: right;
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: 320;
+      }
+
+      &-img {
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        width: 100vw;
+        height: 100vh;
+
+        background-image: url(../img/cup-bg.png);
+        background-position: right;
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: 310;
+      }
+    }
+
+    &-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-self: start;
+      
+      padding: 33px;
+
+      &-text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 50px;
+
+        z-index: 350;
+        // z-index: 910;
+
+        &-teams {
+          display: inline-block;
+          font-size: 83px;
+          line-height: 66px;
+
+          // padding-right: 74px;
+          padding: 15px 74px 0px 10px;
+          margin-bottom: 10px;
+
+          font-family: "DINNextLTPro-Bold";
+          text-transform: uppercase;
+          color: $c-black;
+          background-color: $c-white;
+        }
+
+        &-dallas {
+          margin-bottom: 40px;
+        }
+
+        &-date {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+
+          margin-bottom: 36px;
+
+          &-monthAndDate {
+            font-size: 47px;
+            color: $c-white;
+            font-family: "DINNextLTPro-Medium";
+            text-transform: capitalize;
+
+            &-th {
+              vertical-align: super;
+              font-size: 26px;
+            }
+          }
+
+          &-line {
+            width: 6px;
+            height: 32px;
+            background-color: $c-yellow;
+
+            margin: 2px 18px;
+          }
+
+          &-time {
+            font-size: 47px;
+            color: $c-white;
+            font-family: "DINNextLTPro-Bold";
+            text-transform: uppercase;
+          }
+        }
+
+        &-live {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+
+          &-liveon {
+            font-size: 47px;
+            color: $c-yellow;
+            font-family: "DINNextLTPro-Regular";
+            text-transform: uppercase;
+            margin-right: 22px;
+          }
+
+          &-fs1 {
+            width: 135px;
+            height: 56px;
+
+            background-image: url(../img/fs1.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            margin-right: 16px;
+          }
+
+          &-plus {
+            font-size: 30px;
+            color: $c-yellow;
+            font-family: "DINNextLTPro-Regular";
+
+            margin-right: 20px;
+          }
+
+          &-umas {
+            width: 156px;
+            height: 56px;
+
+            background-image: url(../img/uniUmas.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+          }
+        }
+      }
+
+      &-cupIcon {
+        height: calc(100vh - 550px);
+        width: calc((100vh - 550px) * 1.2);
+        max-height: 364px;
+        max-width: 437px;
+
+        background-image: url(../img/cup-icon.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        z-index: 370;
+      }
+    }
+
+    &-videoContainer {
+      display: none;
+      position: absolute;
+      width: 100vw;
+      height: 100vh;
+
+      top: 0;
+      left: 0;
+
+      background-color: rgba(0, 0, 0, 0.6);
+
+      z-index: 700;
+
+
+      &-video {
+        position: fixed;
+        top: 169px;
+        right: calc(17.5vw + 48px);
+    
+        width: 60vw;
+
+        outline: none;
+      }
+
+      &-playBtn {
+        display: flex;
+        position: fixed;
+        top: 350px;
+        right: 46vw;
+    
+        width: 130px;
+        height: 130px;
+        
+        border: 4px solid $c-white;
+        border-radius: 50%;
+  
+        background-color: rgba(0, 0, 0, 0.6);
+    
+        z-index: 720;
+          
+        cursor: url(../img/cursor-pointer.png), pointer; 
+    
+        &:before {
+          content: "";
+          position: absolute;
+          z-index: 730;
+  
+          left: -18px;
+          top: -18px;
+          
+          width: 160px;
+          height: 160px;
+          animation: 1s linear 0s infinite alternate play-btn-anim;  
+    
+          border-radius: 50%;
+          background-color: rgba(0, 0, 0, 0);
+          border: 3px solid $c-white;
+        }
+
+        &:after {
+          content: "";
+          z-index: 740;
+          margin: auto;
+          display: inline-block;
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 25px 0 25px 30px;
+          border-color: transparent transparent transparent #ffffff;
+        }
+    
+      }
+    }
+
+    &-active {
+      .adv-info-btn {
+
+        &:after {
+          display: none;
+        }
+      }
+
+      .adv-info-videoContainer {
+        display: block;
+      }
+
+      .adv-info {
+        &-btn {
+          &-line {
+            transform: rotate(45deg);
+      
+            &:before {
+              transform: rotate(-90deg);
+            }
+          }
+        }
+        
+      }
+    }
+  }
 }

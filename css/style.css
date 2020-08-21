@@ -1,0 +1,644 @@
+/*helping selectors*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+@keyframes btn-anim {
+  from {
+    left: -1px;
+    top: -1px;
+    width: 36px;
+    height: 36px; }
+  to {
+    left: -7px;
+    top: -7px;
+    width: 48px;
+    height: 48px; } }
+
+@keyframes large-btn-anim {
+  from {
+    left: -4px;
+    top: -4px;
+    width: 92px;
+    height: 92px; }
+  to {
+    left: -13px;
+    top: -13px;
+    width: 110px;
+    height: 110px; } }
+
+@keyframes play-btn-anim {
+  from {
+    left: -2px;
+    top: -3px;
+    width: 130px;
+    height: 130px; }
+  to {
+    left: -18px;
+    top: -18px;
+    width: 160px;
+    height: 160px; } }
+
+@keyframes confetti-rotate-anim-right {
+  0% {
+    transform: rotate(0deg); }
+  25% {
+    transform: rotate(90deg); }
+  50% {
+    transform: rotate(180deg); }
+  75% {
+    transform: rotate(270deg); }
+  100% {
+    transform: rotate(360deg); } }
+
+@keyframes confetti-rotate-anim-left {
+  0% {
+    transform: rotate(0deg); }
+  25% {
+    transform: rotate(-90deg); }
+  50% {
+    transform: rotate(-180deg); }
+  75% {
+    transform: rotate(-270deg); }
+  100% {
+    transform: rotate(-360deg); } }
+
+@keyframes teams-portlandBg-animation-appear {
+  0% {
+    right: 100vw; }
+  100% {
+    right: 22vw; } }
+
+@keyframes teams-portlandBg-animation-disappear {
+  0% {
+    right: 22vw; }
+  100% {
+    right: 100vw; } }
+
+@keyframes teams-dallasBg-animation-appear {
+  0% {
+    left: 100vw; }
+  100% {
+    left: 22vw; } }
+
+@keyframes teams-dallasBg-animation-disappear {
+  0% {
+    left: 22vw; }
+  100% {
+    left: 100vw; } }
+
+@keyframes teams-portlandIcon-animation-disappear {
+  0% {
+    margin-right: 50px; }
+  100% {
+    margin-right: 50vw; } }
+
+@keyframes teams-dallasIcon-animation-disappear {
+  0% {
+    margin-left: 50px; }
+  100% {
+    margin-left: 50vw; } }
+
+@keyframes teams-text-animation-appear {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes teams-text-animation-disappear {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+@keyframes infoGradientBg-animation-disappear {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+@keyframes teams-icons-animation-appear {
+  0% {
+    opacity: 0;
+    height: 100vh;
+    width: 100vw; }
+  100% {
+    opacity: 1;
+    height: 378px;
+    width: 378px; } }
+
+@font-face {
+  font-family: DINNextLTPro-Black;
+  src: url(../fonts/DINNext/DINNextLTPro-Black.otf); }
+
+@font-face {
+  font-family: DINNextLTPro-BlackItalic;
+  src: url(../fonts/DINNext/DINNextLTPro-BlackItalic.otf); }
+
+@font-face {
+  font-family: DINNextLTPro-Bold;
+  src: url(../fonts/DINNext/DINNextLTPro-Bold.otf); }
+
+@font-face {
+  font-family: DINNextLTPro-BoldItalic;
+  src: url(../fonts/DINNext/DINNextLTPro-BoldItalic.otf); }
+
+@font-face {
+  font-family: DINNextLTPro-Heavy;
+  src: url(../fonts/DINNext/DINNextLTPro-Heavy.otf); }
+
+@font-face {
+  font-family: DINNextLTPro-HeavyItalic;
+  src: url(../fonts/DINNext/DINNextLTPro-HeavyItalic.otf); }
+
+@font-face {
+  font-family: DINNextLTPro-Italic;
+  src: url(../fonts/DINNext/DINNextLTPro-Italic.otf); }
+
+@font-face {
+  font-family: DINNextLTPro-Light;
+  src: url(../fonts/DINNext/DINNextLTPro-Light.otf); }
+
+@font-face {
+  font-family: DINNextLTPro-LightItalic;
+  src: url(../fonts/DINNext/DINNextLTPro-LightItalic.otf); }
+
+@font-face {
+  font-family: DINNextLTPro-Medium;
+  src: url(../fonts/DINNext/DINNextLTPro-Medium.otf); }
+
+@font-face {
+  font-family: DINNextLTPro-MediumItalic;
+  src: url(../fonts/DINNext/DINNextLTPro-MediumItalic.otf); }
+
+@font-face {
+  font-family: DINNextLTPro-Regular;
+  src: url(../fonts/DINNext/DINNextLTPro-Regular.otf); }
+
+@font-face {
+  font-family: DINNextLTPro-UltraLight;
+  src: url(../fonts/DINNext/DINNextLTPro-UltraLight.otf); }
+
+@font-face {
+  font-family: DINNextLTPro-UltraLightIt;
+  src: url(../fonts/DINNext/DINNextLTPro-UltraLightIt.otf); }
+
+@font-face {
+  font-family: DINNextRoundedLTPro-Bold;
+  src: url(../fonts/DINNext/DINNextRoundedLTPro-Bold.otf); }
+
+@font-face {
+  font-family: DINNextRoundedLTPro-Light;
+  src: url(../fonts/DINNext/DINNextRoundedLTPro-Light.otf); }
+
+/*general styles*/
+body {
+  background-color: #ffffff; }
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../img/Desktop_cropped1050.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.adv {
+  display: none;
+  position: relative; }
+  .adv-closeBtb {
+    display: flex;
+    position: fixed;
+    top: 15px;
+    right: 18px;
+    width: 36px;
+    height: 36px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+    z-index: 1000; }
+    .adv-closeBtb:before {
+      position: absolute;
+      left: -7px;
+      top: -7px;
+      content: "";
+      width: 48px;
+      height: 48px;
+      animation: 1s linear 0s infinite alternate btn-anim;
+      border-radius: 50%;
+      background-color: rgba(0, 0, 0, 0);
+      border: 1px solid #ffffff; }
+    .adv-closeBtb-line {
+      margin: auto;
+      width: 20px;
+      height: 2px;
+      transform: rotate(45deg);
+      background-color: #ffffff; }
+      .adv-closeBtb-line:before {
+        content: "";
+        position: absolute;
+        background-color: #fff;
+        vertical-align: middle;
+        width: 20px;
+        height: 2px;
+        transform: rotate(-90deg); }
+  .adv-gradientBg {
+    width: 100vw;
+    height: 100vh;
+    opacity: 0.5;
+    background: linear-gradient(180deg, #ffffff 20%, #000000 90%); }
+  .adv-cupHoist {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden; }
+    .adv-cupHoist-cup {
+      display: flex;
+      justify-content: center; }
+      .adv-cupHoist-cup-img {
+        position: absolute;
+        margin-top: 100vh;
+        height: calc(100vh - 5%);
+        filter: drop-shadow(60.891px 67.626px 5.5px rgba(0, 0, 0, 0.35)); }
+    .adv-cupHoist-confetti {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      margin-top: calc(100vh + 250px); }
+      .adv-cupHoist-confetti-line {
+        position: absolute;
+        display: flex;
+        flex-direction: row; }
+        .adv-cupHoist-confetti-line-img {
+          width: 553px; }
+        .adv-cupHoist-confetti-line-rotateLeft {
+          transform: rotate(45deg);
+          animation: 20s linear 0s 1 normal confetti-rotate-anim-left; }
+        .adv-cupHoist-confetti-line-rotateRight {
+          transform: rotate(135deg);
+          animation: 20s linear 0s 1 normal confetti-rotate-anim-right; }
+      .adv-cupHoist-confetti-firstLine {
+        top: -200px; }
+      .adv-cupHoist-confetti-secondLine {
+        top: 150px; }
+      .adv-cupHoist-confetti-thirdLine {
+        top: 500px; }
+      .adv-cupHoist-confetti-fourthLine {
+        top: 920px; }
+  .adv-teams {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden; }
+    .adv-teams-bg {
+      position: relative; }
+      .adv-teams-bg-left {
+        position: absolute;
+        top: 0;
+        right: 100vw;
+        width: 80vw;
+        height: 100vh;
+        background-image: url(../img/Portland.png);
+        background-position: right;
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: 510; }
+      .adv-teams-bg-right {
+        position: absolute;
+        top: 0;
+        left: 100vw;
+        width: 80vw;
+        height: 100vh;
+        background-image: url(../img/Dallas.png);
+        background-position: left;
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: 520; }
+    .adv-teams-teamsContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      width: 100vw;
+      height: 100vh;
+      z-index: 550; }
+      .adv-teams-teamsContainer-icon {
+        opacity: 0;
+        height: 100vh;
+        width: 100vw;
+        background-repeat: no-repeat;
+        background-size: cover; }
+      .adv-teams-teamsContainer-portlandIcon {
+        background-image: url(../img/Portland-icon.svg);
+        background-position: right;
+        margin-right: 50px;
+        z-index: 560; }
+      .adv-teams-teamsContainer-dallasIcon {
+        background-image: url(../img/Dallas-icon.svg);
+        background-position: left;
+        margin-left: 50px;
+        z-index: 570; }
+      .adv-teams-teamsContainer-text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 580; }
+        .adv-teams-teamsContainer-text-helper {
+          box-sizing: border-box; }
+          .adv-teams-teamsContainer-text-helper-line {
+            text-transform: uppercase;
+            color: #ffffff;
+            font-family: "DINNextLTPro-Bold";
+            text-align: center;
+            filter: drop-shadow(6.691px 7.431px 16px #000000);
+            margin-bottom: 26px; }
+            .adv-teams-teamsContainer-text-helper-line:last-child {
+              margin-bottom: 0; }
+          .adv-teams-teamsContainer-text-helper-one {
+            opacity: 0;
+            font-size: 300px;
+            line-height: 210px; }
+          .adv-teams-teamsContainer-text-helper-game {
+            opacity: 0;
+            font-size: 212px;
+            line-height: 150px; }
+          .adv-teams-teamsContainer-text-helper-toGlory {
+            opacity: 0;
+            font-size: 120px;
+            line-height: 88px; }
+  .adv-info {
+    opacity: 0;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 300; }
+    .adv-info-gradientBg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 1;
+      background-color: #000000;
+      z-index: 410; }
+    .adv-info-btn {
+      display: flex;
+      position: fixed;
+      top: 120px;
+      right: 17.5vw;
+      width: 90px;
+      height: 90px;
+      border: 4px solid #ffffff;
+      border-radius: 50%;
+      background-color: rgba(0, 0, 0, 0.6);
+      z-index: 820;
+      cursor: url(../img/cursor-pointer.png) 2 2, pointer; }
+      .adv-info-btn:before {
+        content: "";
+        position: absolute;
+        z-index: 810;
+        left: -4px;
+        top: -4px;
+        width: 110px;
+        height: 110px;
+        animation: 1s linear 0s infinite alternate large-btn-anim;
+        border-radius: 50%;
+        background-color: rgba(0, 0, 0, 0);
+        border: 3px solid #ffffff; }
+      .adv-info-btn:after {
+        content: "watch tv spot";
+        position: absolute;
+        left: -60px;
+        top: 110px;
+        z-index: 815;
+        width: max-content;
+        font-size: 30px;
+        color: #ffffff;
+        font-family: "DINNextLTPro-Bold";
+        text-align: center;
+        text-transform: uppercase;
+        filter: drop-shadow(0.209px 1.989px 1.5px rgba(0, 0, 0, 0.75)); }
+      .adv-info-btn-line {
+        margin: auto;
+        width: 40px;
+        height: 4px;
+        background-color: #ffffff; }
+        .adv-info-btn-line:before {
+          content: "";
+          position: absolute;
+          background-color: #fff;
+          vertical-align: middle;
+          width: 40px;
+          height: 4px;
+          transform: rotate(-90deg); }
+    .adv-info-bg {
+      position: relative; }
+      .adv-info-bg-black {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 62vw;
+        height: 100vh;
+        background-image: url(../img/black-bg.png);
+        background-position: right;
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: 320; }
+      .adv-info-bg-img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100vw;
+        height: 100vh;
+        background-image: url(../img/cup-bg.png);
+        background-position: right;
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: 310; }
+    .adv-info-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-self: start;
+      padding: 33px; }
+      .adv-info-content-text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 50px;
+        z-index: 350; }
+        .adv-info-content-text-teams {
+          display: inline-block;
+          font-size: 83px;
+          line-height: 66px;
+          padding: 15px 74px 0px 10px;
+          margin-bottom: 10px;
+          font-family: "DINNextLTPro-Bold";
+          text-transform: uppercase;
+          color: #000000;
+          background-color: #ffffff; }
+        .adv-info-content-text-dallas {
+          margin-bottom: 40px; }
+        .adv-info-content-text-date {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          margin-bottom: 36px; }
+          .adv-info-content-text-date-monthAndDate {
+            font-size: 47px;
+            color: #ffffff;
+            font-family: "DINNextLTPro-Medium";
+            text-transform: capitalize; }
+            .adv-info-content-text-date-monthAndDate-th {
+              vertical-align: super;
+              font-size: 26px; }
+          .adv-info-content-text-date-line {
+            width: 6px;
+            height: 32px;
+            background-color: #d0ad68;
+            margin: 2px 18px; }
+          .adv-info-content-text-date-time {
+            font-size: 47px;
+            color: #ffffff;
+            font-family: "DINNextLTPro-Bold";
+            text-transform: uppercase; }
+        .adv-info-content-text-live {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center; }
+          .adv-info-content-text-live-liveon {
+            font-size: 47px;
+            color: #d0ad68;
+            font-family: "DINNextLTPro-Regular";
+            text-transform: uppercase;
+            margin-right: 22px; }
+          .adv-info-content-text-live-fs1 {
+            width: 135px;
+            height: 56px;
+            background-image: url(../img/fs1.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin-right: 16px; }
+          .adv-info-content-text-live-plus {
+            font-size: 30px;
+            color: #d0ad68;
+            font-family: "DINNextLTPro-Regular";
+            margin-right: 20px; }
+          .adv-info-content-text-live-umas {
+            width: 156px;
+            height: 56px;
+            background-image: url(../img/uniUmas.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover; }
+      .adv-info-content-cupIcon {
+        height: calc(100vh - 550px);
+        width: calc((100vh - 550px) * 1.2);
+        max-height: 364px;
+        max-width: 437px;
+        background-image: url(../img/cup-icon.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: 370; }
+    .adv-info-videoContainer {
+      display: none;
+      position: absolute;
+      width: 100vw;
+      height: 100vh;
+      top: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.6);
+      z-index: 700; }
+      .adv-info-videoContainer-video {
+        position: fixed;
+        top: 169px;
+        right: calc(17.5vw + 48px);
+        width: 60vw;
+        outline: none; }
+      .adv-info-videoContainer-playBtn {
+        display: flex;
+        position: fixed;
+        top: 350px;
+        right: 46vw;
+        width: 130px;
+        height: 130px;
+        border: 4px solid #ffffff;
+        border-radius: 50%;
+        background-color: rgba(0, 0, 0, 0.6);
+        z-index: 720;
+        cursor: url(../img/cursor-pointer.png), pointer; }
+        .adv-info-videoContainer-playBtn:before {
+          content: "";
+          position: absolute;
+          z-index: 730;
+          left: -18px;
+          top: -18px;
+          width: 160px;
+          height: 160px;
+          animation: 1s linear 0s infinite alternate play-btn-anim;
+          border-radius: 50%;
+          background-color: rgba(0, 0, 0, 0);
+          border: 3px solid #ffffff; }
+        .adv-info-videoContainer-playBtn:after {
+          content: "";
+          z-index: 740;
+          margin: auto;
+          display: inline-block;
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 25px 0 25px 30px;
+          border-color: transparent transparent transparent #ffffff; }
+    .adv-info-active .adv-info-btn:after {
+      display: none; }
+    .adv-info-active .adv-info-videoContainer {
+      display: block; }
+    .adv-info-active .adv-info-btn-line {
+      transform: rotate(45deg); }
+      .adv-info-active .adv-info-btn-line:before {
+        transform: rotate(-90deg); }

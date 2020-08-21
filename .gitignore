@@ -1,1 +1,4 @@
 node_modules
+input
+.DS_Store
+fonts/.DS_Store
