@@ -139,6 +139,16 @@ table {
   100% {
     margin-left: 50vw; } }
 
+@keyframes teams-icons-animation-appear {
+  0% {
+    opacity: 0;
+    height: 100vh;
+    width: 100vw; }
+  100% {
+    opacity: 1;
+    height: 378px;
+    width: 378px; } }
+
 @keyframes teams-text-animation-appear {
   0% {
     opacity: 0; }
@@ -157,15 +167,121 @@ table {
   100% {
     opacity: 0; } }
 
-@keyframes teams-icons-animation-appear {
+@keyframes teams-portlandBg-animation-appear-tablet {
+  0% {
+    right: 100vw; }
+  100% {
+    right: 11vw; } }
+
+@keyframes teams-portlandBg-animation-disappear-tablet {
+  0% {
+    right: 11vw; }
+  100% {
+    right: 100vw; } }
+
+@keyframes teams-dallasBg-animation-appear-tablet {
+  0% {
+    left: 100vw; }
+  100% {
+    left: 11vw; } }
+
+@keyframes teams-dallasBg-animation-disappear-tablet {
+  0% {
+    left: 11vw; }
+  100% {
+    left: 100vw; } }
+
+@keyframes teams-portlandIcon-animation-disappear-tablet {
+  0% {
+    margin-right: 20px; }
+  100% {
+    margin-right: 50vw; } }
+
+@keyframes teams-dallasIcon-animation-disappear-tablet {
+  0% {
+    margin-left: 20px; }
+  100% {
+    margin-left: 50vw; } }
+
+@keyframes teams-icons-animation-appear-tablet {
   0% {
     opacity: 0;
     height: 100vh;
     width: 100vw; }
   100% {
     opacity: 1;
-    height: 378px;
-    width: 378px; } }
+    height: 250px;
+    width: 250px; } }
+
+@keyframes large-btn-anim-mobile {
+  from {
+    left: -2px;
+    top: -2px;
+    width: 50px;
+    height: 50px; }
+  to {
+    left: -9px;
+    top: -9px;
+    width: 64px;
+    height: 64px; } }
+
+@keyframes play-btn-anim-mobile {
+  from {
+    left: -2px;
+    top: -2px;
+    width: 50px;
+    height: 50px; }
+  to {
+    left: -9px;
+    top: -9px;
+    width: 64px;
+    height: 64px; } }
+
+@keyframes teams-portlandBg-animation-appear-mobile {
+  0% {
+    right: 100vw; }
+  100% {
+    right: -50vw; } }
+
+@keyframes teams-portlandBg-animation-disappear-mobile {
+  0% {
+    right: -50vw; }
+  100% {
+    right: 100vw; } }
+
+@keyframes teams-dallasBg-animation-appear-mobile {
+  0% {
+    left: 100vw; }
+  100% {
+    left: -50vw; } }
+
+@keyframes teams-dallasBg-animation-disappear-mobile {
+  0% {
+    left: -50vw; }
+  100% {
+    left: 100vw; } }
+
+@keyframes teams-portlandIcon-animation-disappear-mobile {
+  0% {
+    margin-right: 20px; }
+  100% {
+    margin-right: 100vw; } }
+
+@keyframes teams-dallasIcon-animation-disappear-mobile {
+  0% {
+    margin-left: 20px; }
+  100% {
+    margin-left: 100vw; } }
+
+@keyframes teams-icons-animation-appear-mobile {
+  0% {
+    opacity: 0;
+    height: 100vh;
+    width: 100vw; }
+  100% {
+    opacity: 1;
+    height: 150px;
+    width: 150px; } }
 
 @font-face {
   font-family: DINNextLTPro-Black;
@@ -642,3 +758,254 @@ body {
       transform: rotate(45deg); }
       .adv-info-active .adv-info-btn-line:before {
         transform: rotate(-90deg); }
+
+@media only screen and (min-width: 1024px) and (max-width: 1439px) {
+  .adv-teams-bg-left {
+    width: 89vw; }
+  .adv-teams-bg-right {
+    width: 89vw; }
+  .adv-teams-teamsContainer-portlandIcon {
+    margin-right: 20px; }
+  .adv-teams-teamsContainer-dallasIcon {
+    margin-left: 20px; }
+  .adv-teams-teamsContainer-text-helper-one {
+    font-size: 240px;
+    line-height: 160px; }
+  .adv-teams-teamsContainer-text-helper-game {
+    font-size: 170px;
+    line-height: 100px; }
+  .adv-teams-teamsContainer-text-helper-toGlory {
+    font-size: 96px;
+    line-height: 60px; }
+  .adv-info-btn {
+    display: flex;
+    position: fixed;
+    top: 120px;
+    right: 17.5vw;
+    width: 90px;
+    height: 90px;
+    border: 4px solid #ffffff;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 820;
+    cursor: url(../img/cursor-pointer.png) 2 2, pointer; }
+    .adv-info-btn:before {
+      content: "";
+      position: absolute;
+      z-index: 810;
+      left: -4px;
+      top: -4px;
+      width: 110px;
+      height: 110px;
+      animation: 1s linear 0s infinite alternate large-btn-anim;
+      border-radius: 50%;
+      background-color: rgba(0, 0, 0, 0);
+      border: 3px solid #ffffff; }
+    .adv-info-btn:after {
+      content: "watch tv spot";
+      position: absolute;
+      left: -60px;
+      top: 110px;
+      z-index: 815;
+      width: max-content;
+      font-size: 30px;
+      color: #ffffff;
+      font-family: "DINNextLTPro-Bold";
+      text-align: center;
+      text-transform: uppercase;
+      filter: drop-shadow(0.209px 1.989px 1.5px rgba(0, 0, 0, 0.75)); }
+    .adv-info-btn-line {
+      margin: auto;
+      width: 40px;
+      height: 4px;
+      background-color: #ffffff; }
+      .adv-info-btn-line:before {
+        content: "";
+        position: absolute;
+        background-color: #fff;
+        vertical-align: middle;
+        width: 40px;
+        height: 4px;
+        transform: rotate(-90deg); }
+  .adv-info-bg-black {
+    width: 80vw; }
+  .adv-info-bg-img {
+    background-position: center; }
+  .adv-info-content-text {
+    margin-bottom: 136px; }
+    .adv-info-content-text-teams {
+      font-size: 60px;
+      line-height: 56px;
+      padding: 10px 50px 0px 10px; }
+    .adv-info-content-text-dallas {
+      margin-bottom: 20px; }
+    .adv-info-content-text-date {
+      margin-bottom: 26px; }
+      .adv-info-content-text-date-monthAndDate {
+        font-size: 36px; }
+        .adv-info-content-text-date-monthAndDate-th {
+          font-size: 22px; }
+      .adv-info-content-text-date-line {
+        width: 4px;
+        height: 26px;
+        margin: 4px 18px; }
+      .adv-info-content-text-date-time {
+        font-size: 36px; }
+    .adv-info-content-text-live-liveon {
+      font-size: 36px; }
+    .adv-info-content-text-live-fs1 {
+      width: 110px;
+      height: 46px; }
+    .adv-info-content-text-live-plus {
+      font-size: 26px; }
+    .adv-info-content-text-live-umas {
+      width: 128px;
+      height: 46px; }
+  .adv-info-videoContainer-playBtn {
+    top: 270px; } }
+
+@media only screen and (min-width: 320px) and (max-width: 1023px) {
+  .adv-cupHoist-cup-img {
+    height: calc(100vh - 5%);
+    width: calc((100vh - 5%)/2.1);
+    right: calc(45vw - (100vh - 5%)/4.1);
+    filter: drop-shadow(60.891px 67.626px 5.5px rgba(0, 0, 0, 0.35)); }
+  .adv-cupHoist-confetti {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top: calc(100vh + 250px); }
+    .adv-cupHoist-confetti-line {
+      position: absolute;
+      display: flex;
+      flex-direction: row; }
+      .adv-cupHoist-confetti-line-img {
+        width: 350px; }
+      .adv-cupHoist-confetti-line-rotateLeft {
+        transform: rotate(45deg);
+        animation: 20s linear 0s 1 normal confetti-rotate-anim-left; }
+      .adv-cupHoist-confetti-line-rotateRight {
+        transform: rotate(135deg);
+        animation: 20s linear 0s 1 normal confetti-rotate-anim-right; }
+    .adv-cupHoist-confetti-firstLine {
+      top: -200px; }
+    .adv-cupHoist-confetti-secondLine {
+      top: 50px; }
+    .adv-cupHoist-confetti-thirdLine {
+      top: 300px; }
+    .adv-cupHoist-confetti-fourthLine {
+      top: 550px; }
+  .adv-teams-bg-left {
+    right: 100vw;
+    width: 150vw;
+    height: 100vh; }
+  .adv-teams-bg-right {
+    left: 100vw;
+    width: 150vw;
+    height: 100vh; }
+  .adv-teams-teamsContainer-portlandIcon {
+    position: absolute;
+    right: calc(50vw - 125px);
+    top: 3vh; }
+  .adv-teams-teamsContainer-dallasIcon {
+    position: absolute;
+    left: calc(50vw - 125px);
+    bottom: 3vh; }
+  .adv-teams-teamsContainer-text-helper-one {
+    font-size: 158px;
+    line-height: 90px; }
+  .adv-teams-teamsContainer-text-helper-game {
+    font-size: 110px;
+    line-height: 70px; }
+  .adv-teams-teamsContainer-text-helper-toGlory {
+    font-size: 64px;
+    line-height: 24px; }
+  .adv-info-btn {
+    top: 80px;
+    right: 5.5vw;
+    width: 50px;
+    height: 50px;
+    border: 3px solid #ffffff; }
+    .adv-info-btn:before {
+      left: -9px;
+      top: -9px;
+      width: 64px;
+      height: 64px;
+      border: 2px solid #ffffff;
+      animation: 1s linear 0s infinite alternate large-btn-anim-mobile; }
+    .adv-info-btn:after {
+      left: -19px;
+      top: 60px;
+      font-size: 22px;
+      width: 82px; }
+  .adv-info-bg-black {
+    top: -20vh;
+    width: 100vw;
+    background-position: center; }
+  .adv-info-bg-img {
+    background-position: center; }
+  .adv-info-content {
+    padding: 20px;
+    height: calc(100vh - 40px); }
+    .adv-info-content-text {
+      margin-bottom: 100px; }
+      .adv-info-content-text-teams {
+        font-size: 28px;
+        line-height: 26px;
+        padding: 10px 24px 3px 10px;
+        margin-bottom: 6px; }
+      .adv-info-content-text-dallas {
+        margin-bottom: 40px; }
+      .adv-info-content-text-date {
+        margin-bottom: 16px; }
+        .adv-info-content-text-date-monthAndDate {
+          font-size: 28px; }
+          .adv-info-content-text-date-monthAndDate-th {
+            font-size: 14px; }
+        .adv-info-content-text-date-line {
+          width: 2px;
+          height: 20px; }
+        .adv-info-content-text-date-time {
+          font-size: 28px; }
+      .adv-info-content-text-live {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center; }
+        .adv-info-content-text-live-liveon {
+          font-size: 26px;
+          margin-right: 10px; }
+        .adv-info-content-text-live-fs1 {
+          width: 100px;
+          height: 41px;
+          margin-right: 10px; }
+        .adv-info-content-text-live-plus {
+          font-size: 24px;
+          margin-right: 10px; }
+        .adv-info-content-text-live-umas {
+          width: 100px;
+          height: 36px; }
+    .adv-info-content-cupIcon {
+      height: calc(100vh - 335px);
+      width: calc((100vh - 335px) * 1.2);
+      max-height: 208px;
+      max-width: 250px; }
+  .adv-info-videoContainer-video {
+    top: 30vh;
+    right: 5vw;
+    width: 90vw; }
+  .adv-info-videoContainer-playBtn {
+    top: 40vh;
+    right: 45vw;
+    width: 50px;
+    height: 50px;
+    border: 3px solid #ffffff; }
+    .adv-info-videoContainer-playBtn:before {
+      left: -9px;
+      top: -9px;
+      width: 64px;
+      height: 64px;
+      border: 2px solid #ffffff;
+      animation: 1s linear 0s infinite alternate play-btn-anim-mobile; }
+    .adv-info-videoContainer-playBtn:after {
+      border-width: 15px 0 15px 20px; } }
