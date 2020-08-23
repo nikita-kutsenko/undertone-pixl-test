@@ -61,6 +61,11 @@ videoPlayBtn.onclick = function(){
 
 // ************
 
+// if (window.innerWidth >= 1440) {
+// } else if (window.innerWidth <= 1439 && window.innerWidth >= 1024) {
+// } else if (window.innerWidth <= 1023 && window.innerWidth >= 320) {
+// }
+
 
 
 // TIMEOUT FUNCTIONS 
@@ -94,12 +99,28 @@ setTimeout( () => {
 // 2. display none for cup  
 // 3. display none for confetti  
 setTimeout( () => {
-    portlandBg.style.animation = "1s linear 0s 1 normal teams-portlandBg-animation-appear";
-    dallasBg.style.animation = "1s linear 0s 1 normal teams-dallasBg-animation-appear";
+    if (window.innerWidth >= 1440) {
+        portlandBg.style.animation = "1s linear 0s 1 normal teams-portlandBg-animation-appear";
+        dallasBg.style.animation = "1s linear 0s 1 normal teams-dallasBg-animation-appear";
+    } else if (window.innerWidth <= 1439 && window.innerWidth >= 1024) {
+        portlandBg.style.animation = "1s linear 0s 1 normal teams-portlandBg-animation-appear-tablet";
+        dallasBg.style.animation = "1s linear 0s 1 normal teams-dallasBg-animation-appear-tablet";
+    } else if (window.innerWidth <= 1023 && window.innerWidth >= 320) {
+        portlandBg.style.animation = "1s linear 0s 1 normal teams-portlandBg-animation-appear-mobile";
+        dallasBg.style.animation = "1s linear 0s 1 normal teams-dallasBg-animation-appear-mobile";
+    }
 
     setTimeout( () => {
-        portlandBg.style.right = 22 + 'vw';
-        dallasBg.style.left = 22 + 'vw';
+        if (window.innerWidth >= 1440) {
+            portlandBg.style.right = 22 + 'vw';
+            dallasBg.style.left = 22 + 'vw';
+        } else if (window.innerWidth <= 1439 && window.innerWidth >= 1024) {
+            portlandBg.style.right = 11 + 'vw';
+            dallasBg.style.left = 11 + 'vw';
+        } else if (window.innerWidth <= 1023 && window.innerWidth >= 320) {
+            portlandBg.style.right = -50 + 'vw';
+            dallasBg.style.left = -50 + 'vw';
+        }
 
         cup.style.display = 'none';
         confettiImages.style.display = 'none';
@@ -129,18 +150,38 @@ setTimeout( () => {
     setTimeout( () => {
         toGlory.style.opacity = 1;
         
-        portlandIcon.style.animation = "0.3s linear 0s 1 normal teams-icons-animation-appear";
-        dallasIcon.style.animation = "0.3s linear 0s 1 normal teams-icons-animation-appear";
+        if (window.innerWidth >= 1440) {
+            portlandIcon.style.animation = "0.3s linear 0s 1 normal teams-icons-animation-appear";
+            dallasIcon.style.animation = "0.3s linear 0s 1 normal teams-icons-animation-appear";
+        } else if (window.innerWidth <= 1439 && window.innerWidth >= 1024) {
+            portlandIcon.style.animation = "0.3s linear 0s 1 normal teams-icons-animation-appear-tablet";
+            dallasIcon.style.animation = "0.3s linear 0s 1 normal teams-icons-animation-appear-tablet";
+        } else if (window.innerWidth <= 1023 && window.innerWidth >= 320) {
+            portlandIcon.style.animation = "0.3s linear 0s 1 normal teams-icons-animation-appear-mobile";
+            dallasIcon.style.animation = "0.3s linear 0s 1 normal teams-icons-animation-appear-mobile";
+        }
     }, 900);
 
     setTimeout( () => {
         portlandIcon.style.opacity = 1;
-        portlandIcon.style.height = 378 + 'px';
-        portlandIcon.style.width = 378 + 'px';
-
         dallasIcon.style.opacity = 1;
-        dallasIcon.style.height = 378 + 'px';
-        dallasIcon.style.width = 378 + 'px';
+
+        if (window.innerWidth >= 1440) {
+            portlandIcon.style.height = 378 + 'px';
+            portlandIcon.style.width = 378 + 'px';
+            dallasIcon.style.height = 378 + 'px';
+            dallasIcon.style.width = 378 + 'px';
+        } else if (window.innerWidth <= 1439 && window.innerWidth >= 1024) {
+            portlandIcon.style.height = 250 + 'px';
+            portlandIcon.style.width = 250 + 'px';
+            dallasIcon.style.height = 250 + 'px';
+            dallasIcon.style.width = 250 + 'px';
+        } else if (window.innerWidth <= 1023 && window.innerWidth >= 320) {
+            portlandIcon.style.height = 150 + 'px';
+            portlandIcon.style.width = 150 + 'px';
+            dallasIcon.style.height = 150 + 'px';
+            dallasIcon.style.width = 150 + 'px';
+        }
     }, 1200);
 }, 4000);
 
@@ -160,8 +201,16 @@ setTimeout( () => {
     dallasBg.style.animation = "1s linear 0s 1 normal teams-dallasBg-animation-disappear";
     infoGradientBg.style.animation = "1.5s linear 0s 1 normal infoGradientBg-animation-disappear";
 
-    portlandIcon.style.animation = "0.5s linear 0s 1 normal teams-portlandIcon-animation-disappear";
-    dallasIcon.style.animation = "0.5s linear 0s 1 normal teams-dallasIcon-animation-disappear";
+    if (window.innerWidth >= 1440) {
+        portlandIcon.style.animation = "0.5s linear 0s 1 normal teams-portlandIcon-animation-disappear";
+        dallasIcon.style.animation = "0.5s linear 0s 1 normal teams-dallasIcon-animation-disappear";
+    } else if (window.innerWidth <= 1439 && window.innerWidth >= 1024) {
+        portlandIcon.style.animation = "0.5s linear 0s 1 normal teams-portlandIcon-animation-disappear-tablet";
+        dallasIcon.style.animation = "0.5s linear 0s 1 normal teams-dallasIcon-animation-disappear-tablet";
+    } else if (window.innerWidth <= 1023 && window.innerWidth >= 320) {
+        portlandIcon.style.animation = "0.5s linear 0s 1 normal teams-portlandIcon-animation-mobile";
+        dallasIcon.style.animation = "0.5s linear 0s 1 normal teams-dallasIcon-animation-mobile";
+    }
 
     setTimeout( () => {
         one.style.opacity = 0;
@@ -170,8 +219,13 @@ setTimeout( () => {
     }, 300);
 
     setTimeout( () => {
-        portlandIcon.style.marginRight = 50 + 'vw';
-        dallasIcon.style.marginLeft = 50 + 'vw';
+        if (window.innerWidth >= 1024) {
+            portlandIcon.style.marginRight = 50 + 'vw';
+            dallasIcon.style.marginLeft = 50 + 'vw';
+        } else if (window.innerWidth <= 1023 && window.innerWidth >= 320) {
+            portlandIcon.style.marginRight = 100 + 'vw';
+            dallasIcon.style.marginLeft = 100 + 'vw';
+        }
     }, 500);
 
     setTimeout( () => {
